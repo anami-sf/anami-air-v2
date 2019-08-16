@@ -1,8 +1,12 @@
 var express = require('express');
 var router = express.Router();
-const flightsCtl = require('../controllers/flights')
+var flightsCtl = require('../controllers/flights')
 
 /* GET users listing. */
-router.get('/', moviesCtrl.index);
+router.get('/', flightsCtl.index);
+
+// router.get('/', function(req, res, next) {
+//     res.render('flights/index', { title: 'Anami Air' });
+// });
 
 module.exports = router;

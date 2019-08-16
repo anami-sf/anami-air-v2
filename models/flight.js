@@ -7,4 +7,4 @@ var flightSchema = new mongoose.Schema({
     departs: Date // Default value: One year from date created
 });
 
-module.exports = mongoose.model('Flight', postSchema);
+module.exports = mongoose.model('Flight', flightSchema);
