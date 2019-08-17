@@ -1,11 +1,12 @@
-<!-- GET /posts/new -->
+<!-- POST /posts -->
 
 <%- include('../../partials/header') %>
     <h1>Add Flight</h1>
-    <form method="GET" action="/flights/new">
+    <form method="POST" action="/flights">
         <label >Airline
             <input type="text" name='airline'>
         </label>
+        <button type="submit">Submit</button>
     </form>
 <%- include('../../partials/footer') %>
 

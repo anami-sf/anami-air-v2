@@ -5,8 +5,6 @@ var flightsCtl = require('../controllers/flights')
 /* GET users listing. */
 router.get('/', flightsCtl.index);
 
-// router.get('/', function(req, res, next) {
-//     res.render('flights/index', { title: 'Anami Air' });
-// });
+router.get('/new', flightsCtl.new)
 
 module.exports = router;
