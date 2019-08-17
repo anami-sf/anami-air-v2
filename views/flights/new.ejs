@@ -3,10 +3,20 @@
 <%- include('../../partials/header') %>
     <h1>Add Flight</h1>
     <form method="POST" action="/flights">
-        <label >Airline
+        <label >Airline:
             <input type="text" name='airline'>
         </label>
+        <label >Flight No: 
+            <input type="text" name='flightNo'>
+        </label>
+        <label >Departure Date/Time:
+                <input 
+                type="datetime-local"
+                name="departs" value="2018-06-12T19:30"
+                >
+        </label>
         <button type="submit">Submit</button>
+        
     </form>
 <%- include('../../partials/footer') %>
 
