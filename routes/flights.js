@@ -7,4 +7,7 @@ router.get('/', flightsCtl.index);
 
 router.get('/new', flightsCtl.new)
 
+router.post('/', flightsCtl.create);
+
+
 module.exports = router;
