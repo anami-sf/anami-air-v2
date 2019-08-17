@@ -2,7 +2,7 @@ const Flight = require('../models/flight')
 
 const index = (req,res) => {
     Flight.find({}, (err,flightsArr) => {
-        res.render('flights/index',{flights:flightsArr})   
+        res.render('flights/index',{flightsArr:flightsArr}) 
     })
 }
 
