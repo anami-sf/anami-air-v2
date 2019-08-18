@@ -10,6 +10,7 @@ var flightSchema = new mongoose.Schema({
     airline: String, //enum to include 'American', 'Southwest' & 'United'
     flightNo: Number, //Required - Between 10 and 9999
     departs: Date, // Default value: One year from date created
+    airport: String,
     destinations: [destinationSchema]
 });
 

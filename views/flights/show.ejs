@@ -3,15 +3,14 @@
 <%- include('../../partials/header') %>
 <a href="/flights">All Flights</a>
 
-<h1>FLIGHTS</h1>
+<h1>FLIGHT # <%= flight.flightNo%></h1>
 <ul>
     <li>ID: <%= flight._id %></li>
     <li>Airline: <%= flight.airline %></li>
-    <li>Flight No: <%= flight.flightNo%></li>
     <li>Departs: <%= flight.departs%></li>
 </ul>
 
-<h1>Destinations</h1>
+<h2>Destinations</h2>
 <% flight.destinations.forEach((destination, idx) => { %>
 <ul>
     <li>Airport: <%=destination.airport%></li>
