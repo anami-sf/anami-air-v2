@@ -11,8 +11,14 @@
     <li>Departs: <%= flight.departs%></li>
 </ul>
 
-<h1>Destination</h1>
-<h3>Destination: <%= flight.destinations %></h3>
+<h1>Destinations</h1>
+<% flight.destinations.forEach((destination, idx) => { %>
+<ul>
+    <li>Airport: <%=destination.airport%></li>
+    <li>Arrival: <%=destination.arrival%></li>
+</ul>
+<% }) %>
+
    
 <h2>Add Destination</h2>
 <form id="destination-form" method="POST"
