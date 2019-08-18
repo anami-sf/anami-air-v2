@@ -3,7 +3,7 @@ const router = express.Router()
 const destinationsCtl = require(`../controllers/destinations`)
 
 router.post(
-    '/destinations/:id/destinations', 
+    '/flights/:id/destinations', 
     destinationsCtl.create
     )
 

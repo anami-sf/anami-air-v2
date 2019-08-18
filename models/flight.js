@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 var destinationSchema = new mongoose.Schema({
-    airport: {type: String, min: 3, max: 3, default: 3},
+    airport: String,
     arrival: Date
 });
 

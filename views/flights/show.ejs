@@ -1,6 +1,8 @@
 <!-- POST /posts/:id -->
 
 <%- include('../../partials/header') %>
+<a href="/flights">All Flights</a>
+
 <h1>FLIGHTS</h1>
 <ul>
     <li>ID: <%= flight._id %></li>
@@ -8,12 +10,15 @@
     <li>Flight No: <%= flight.flightNo%></li>
     <li>Departs: <%= flight.departs%></li>
 </ul>
+
+<h1>Destination</h1>
+<h3>Destination: <%= flight.destinations %></h3>
    
-<h2>Destination</h2>
+<h2>Add Destination</h2>
 <form id="destination-form" method="POST"
 action="/flights/<%= flight._id %>/destinations">
     <label>Airport:</label>
-    <select name="rating">
+    <select name="airport">
         <option value="AUS">AUS</option>
         <option value="DAL">DAL</option>
         <option value="LAX">LAX</option>
@@ -28,5 +33,5 @@ action="/flights/<%= flight._id %>/destinations">
     </label>
     <input type="submit" value="Add Destination">
 </form>
-<a href="/flights">All Flights</a>
+
 <%- include('../../partials/footer') %>
