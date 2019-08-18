@@ -21,7 +21,7 @@ function create(req, res) {
       if (err) return res.redirect('/flights/new')
       console.log(flight)
       // for now, redirect right back to new.ejs
-      res.redirect('/flights')
+      res.redirect(`/flights/${flight._id}`)
     })
 }
 
