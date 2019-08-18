@@ -8,5 +8,25 @@
     <li>Flight No: <%= flight.flightNo%></li>
     <li>Departs: <%= flight.departs%></li>
 </ul>
+   
+<h2>Destination</h2>
+<form id="destination-form" method="POST"
+action="/flights/<%= flight._id %>/destination">
+    <label>Airport:</label>
+    <select name="rating">
+        <option value="AUS">AUS</option>
+        <option value="DAL">DAL</option>
+        <option value="LAX">LAX</option>
+        <option value="SEA">SEA</option>
+    </select>
+    <label >Arrival Date/Time:
+        <input 
+        type="datetime-local"
+        name="arrival" 
+        value="2018-06-12T19:30"
+        >
+    </label>
+    <input type="submit" value="Add Destination">
+</form>
 <a href="/flights">All Flights</a>
 <%- include('../../partials/footer') %>
