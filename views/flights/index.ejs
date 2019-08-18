@@ -10,6 +10,7 @@
         <li>Airline: <%= flight.airline %></li>
         <li>Flight No: <%= flight.flightNo%></li>
         <li>Departs: <%= flight.departs%></li>
+        <a href="/flights/<%= flight._id %>">DETAILS</a>
     </ul>
     <% }) %>
 <%- include('../../partials/footer') %>
