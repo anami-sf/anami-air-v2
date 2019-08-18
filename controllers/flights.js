@@ -14,7 +14,8 @@ const newFlight= (req, res) => {
 }
 
 function create(req, res) {
-    //var flight = new Flight(req.body)
+    console.log(req.params)
+    var flight = new Flight(req.body)
     flight.save(function(err) {
       // one way to handle errors
       if (err) return res.redirect('/flights/new')
