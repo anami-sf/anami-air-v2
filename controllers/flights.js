@@ -24,8 +24,15 @@ function create(req, res) {
     })
 }
 
+const show = (req, res) => {
+    Flight.findById(req.params.id, (err, flight) => {
+        res.render('flights/show',{flight:flight}) 
+    })
+}
+
 module.exports = {
     index,
     new: newFlight,
-    create
+    create,
+    show
 }

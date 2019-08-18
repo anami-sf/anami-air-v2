@@ -2,7 +2,7 @@
 
 <%- include('../../partials/header') %>
     <h1>Add Flight</h1>
-    <form method="POST" action="/flights">
+    <form method="POST" action="/flights/<%=flight._id %>">
         <label >Airline:
             <input type="text" name='airline'>
         </label>

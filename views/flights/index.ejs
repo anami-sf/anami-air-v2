@@ -6,6 +6,7 @@
     <a href="flights/new">Add new flight</a>
     <% flightsArr.forEach( (flight, idx)=> {%>
     <ul>
+        <li>ID: <%= flight._id %></li>
         <li>Airline: <%= flight.airline %></li>
         <li>Flight No: <%= flight.flightNo%></li>
         <li>Departs: <%= flight.departs%></li>

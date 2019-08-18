@@ -1,0 +1,11 @@
+<!-- POST /posts/:id -->
+
+<%- include('../../partials/header') %>
+<h1>FLIGHTS</h1>
+<ul>
+    <li>ID: <%= flight._id %></li>
+    <li>Airline: <%= flight.airline %></li>
+    <li>Flight No: <%= flight.flightNo%></li>
+    <li>Departs: <%= flight.departs%></li>
+</ul>
+<%- include('../../partials/footer') %>
