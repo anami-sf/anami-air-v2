@@ -10,11 +10,11 @@ const newFlight= (req, res) => {
     //take req.body and send it to show view
     //var flight = new Flight(req.body)
     //console.log(flight)
-    res.render( 'flights/new')
+    res.render( 'flights/new', )
 }
 
 function create(req, res) {
-    var flight = new Flight(req.body)
+    //var flight = new Flight(req.body)
     flight.save(function(err) {
       // one way to handle errors
       if (err) return res.redirect('/flights/new')
