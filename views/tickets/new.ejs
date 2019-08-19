@@ -1,6 +1,6 @@
 
 <%- include('../../partials/header') %>
-<h2>Add Destination</h2>
+<h2>NEW TICKET</h2>
 <form id="tix-form" method="POST"
 action="/flights/<%= flight.id %>/tickets/new">
     <label >Seat No:
@@ -14,4 +14,9 @@ action="/flights/<%= flight.id %>/tickets/new">
 
     <input type="submit" value="Add Ticket">
 </form>
+<div id="menu">
+    <a href="/flights/<%= flight._id %>">DETAILS</a>
+    <a href="/flights">ALL FLIGHTS</a>  
+</div>
+
 <%- include('../../partials/footer') %>

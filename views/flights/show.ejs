@@ -1,8 +1,6 @@
 <!-- POST /posts/:id -->
 
 <%- include('../../partials/header') %>
-<a href="/flights">All Flights</a>
-
 <h1>FLIGHT # <%= flight.flightNo%></h1>
 <ul>
     <li>ID: <%= flight._id %></li>
@@ -10,7 +8,15 @@
     <li>Departs: <%= flight.departs%></li>
 </ul>
 
-<a href="/flights/<%= flight.id %>/tickets/new">Add ticket</a>
+<ul><li id="menu">
+        <div id="">
+                <a href="/flights/<%= flight.id %>/tickets/new">ADD DESTINATION</a>
+                <a href="/flights/<%= flight.id %>/tickets/new">ADD TICKET</a>
+                <a href="/flights">ALL FLIGHTS</a>
+            </div>
+</li></ul>
+
+
 
 <h2>Destinations</h2>
 <% flight.destinations.forEach((destination, idx) => { %>

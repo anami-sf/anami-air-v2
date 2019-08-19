@@ -15,10 +15,20 @@ a {
 }
 
 li {
+  display: block;
   list-style-type: none;
   border: 3px solid rgb(1, 48, 136);
   padding: 1px;
+}
 
+#menu {
+  background-color: grey;
+  width: 100%;
+  border: none;
+}
+
+input {
+  display: block;
 }
 .bg {
   animation:slide 3s ease-in-out infinite alternate;
