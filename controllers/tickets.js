@@ -14,17 +14,6 @@ const newTicket = (req, res) => {
     })
 }
 
-// const create = (req, res) => {
-//     Flight.findById(req.params.id, (err, flight) => {
-//         //Explain this line, what is 'req.body'? where does it come from?
-//         flight.destinations.push(req.body)
-//         flight.save((err) => {
-//             res.redirect(`/flights/${flight._id}`)
-//         })
-//     })
-// }
-
-
 const create = (req, res) => {
     console.log('at create => req.params.id: ', req.params.id)
     Flight.findById(req.params.id, (err, flight) => {

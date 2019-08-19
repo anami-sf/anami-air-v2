@@ -21,8 +21,12 @@
 <% }) %>
 
 <h2>Tickets</h2>
-
-
+<%tickets.forEach((ticket, idx) => { %>
+<ul>
+    <li>Seat #: <%=ticket.seat%></li>
+    <li>Price $<%=ticket.price%></li>
+</ul>
+<%})%>
    
 <h2>Add Destination</h2>
 <form id="destination-form" method="POST"
