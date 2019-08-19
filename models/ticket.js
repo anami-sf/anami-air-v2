@@ -2,12 +2,9 @@ const mongoose = require('mongoose')
 
 var ticketSchema = new mongoose.Schema({
     seat: String,
-    price: Number,
-    flight: {type: ObjectId, required: true, unique: false}
-}, {
-    timestamps: true
-    }
-)
+    flight: [{type: mongoose.Schema.Types.ObjectId, ref: 'Flight'}]
+})
 
-module.exports = mongoose.model(Ticket, ticketSchema)
+module.exports = mongoose.model('Ticket', ticketSchema)
+
 

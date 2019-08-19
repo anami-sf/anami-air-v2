@@ -11,7 +11,8 @@ var flightSchema = new mongoose.Schema({
     flightNo: Number, //Required - Between 10 and 9999
     departs: Date, // Default value: One year from date created
     airport: String,
-    destinations: [destinationSchema]
+    destinations: [destinationSchema],
+    tickets: [{type: mongoose.Schema.Types.ObjectId, ref: 'Ticket'}]
 });
 
 module.exports = mongoose.model('Flight', flightSchema);
