@@ -2,16 +2,16 @@
 <%- include('../../partials/header') %>
 <h2>Add Destination</h2>
 <form id="tix-form" method="POST"
-action="/tickets">
+action="/flights/<%= flight.id %>/tickets/new">
     <label >Seat No:
         <input type="text" name="seat" >
     </label>
     <label >Price:
-        <input type="text" name="seat" >
+        <input type="text" name="price" >
     </label>
-    <label >Flight:
-        <input type="text" name="seat" >
-    </label>
+
+    <input type="hidden" name="flight" value= '<%= flight.id %>' >
+
     <input type="submit" value="Add Ticket">
 </form>
 <%- include('../../partials/footer') %>

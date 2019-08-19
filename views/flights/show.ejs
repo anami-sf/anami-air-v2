@@ -10,7 +10,7 @@
     <li>Departs: <%= flight.departs%></li>
 </ul>
 
-<a href="/tickets/new">Add ticket</a>
+<a href="/flights/<%= flight.id %>/tickets/new">Add ticket</a>
 
 <h2>Destinations</h2>
 <% flight.destinations.forEach((destination, idx) => { %>
@@ -19,6 +19,9 @@
     <li>Arrival: <%=destination.arrival%></li>
 </ul>
 <% }) %>
+
+<h2>Tickets</h2>
+
 
    
 <h2>Add Destination</h2>
