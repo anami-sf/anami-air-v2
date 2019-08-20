@@ -8,10 +8,7 @@ const index = (req,res) => {
 }
 
 const newFlight= (req, res) => {
-    //take req.body and send it to show view
-    //var flight = new Flight(req.body)
-    //console.log(flight)
-    res.render( 'flights/new', )
+    res.render('flights/new')
 }
 
 function create(req, res) {

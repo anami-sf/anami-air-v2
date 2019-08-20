@@ -25,7 +25,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/flights', flightsRouter);
-// when mounting routers for nested resources we need more flexibility in our paths, so we are going to mount to the root (/) path
+// when mounting routes for nested resources 
+// we need more flexibility in our paths, so we 
+// mount to the root (/)
 app.use('/', destinationsRouter);
 app.use('/', ticketsRouter)
 

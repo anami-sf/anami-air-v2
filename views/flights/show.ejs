@@ -10,7 +10,7 @@
 
 <ul><li id="menu">
         <div id="">
-                <a href="/flights/<%= flight.id %>/tickets/new">ADD DESTINATION</a>
+                <a href="#destination">ADD DESTINATION</a>
                 <a href="/flights/<%= flight.id %>/tickets/new">ADD TICKET</a>
                 <a href="/flights">ALL FLIGHTS</a>
             </div>
@@ -18,7 +18,7 @@
 
 
 
-<h2>Destinations</h2>
+<h3>Destinations</h3>
 <% flight.destinations.forEach((destination, idx) => { %>
 <ul>
     <li>Airport: <%=destination.airport%></li>
@@ -26,7 +26,7 @@
 </ul>
 <% }) %>
 
-<h2>Tickets</h2>
+<h3>Tickets</h3>
 <%tickets.forEach((ticket, idx) => { %>
 <ul>
     <li>Seat #: <%=ticket.seat%></li>
@@ -34,7 +34,7 @@
 </ul>
 <%})%>
    
-<h2>Add Destination</h2>
+<h2 id="destination">Add Destination</h2>
 <form id="destination-form" method="POST"
 action="/flights/<%= flight._id %>/destinations">
     <label>Airport:</label>
